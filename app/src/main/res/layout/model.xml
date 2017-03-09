@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+<ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:padding="10dp"
+        android:id="@+id/modelImageView" />
+
+    <TextView
+        android:text="TextView1"
+        android:textColor="#ffb3b3"
+        android:width="72dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/modelImageView"
+        android:layout_toEndOf="@+id/modelImageView"
+        android:id="@+id/modelFistForm" />
+
+    <TextView
+        android:text="TextView2"
+        android:textColor="#c6ffb3"
+        android:width="72dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/modelFistForm"
+        android:layout_toRightOf="@+id/modelFistForm"
+        android:layout_toEndOf="@+id/modelFistForm"
+        android:id="@+id/modelSecondForm" />
+
+    <TextView
+        android:text="TextView3"
+        android:textColor="#b3c6ff"
+        android:width="72dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/modelSecondForm"
+        android:layout_toRightOf="@+id/modelSecondForm"
+        android:layout_toEndOf="@+id/modelSecondForm"
+        android:id="@+id/modelThridForm" />
+
+    <TextView
+        android:text="TextView4"
+        android:width="80dp"
+        android:textColor="#d1d1e0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/modelThridForm"
+        android:layout_toRightOf="@+id/modelThridForm"
+        android:layout_toEndOf="@+id/modelThridForm"
+        android:id="@+id/modelTranslation" />
+
+</LinearLayout>

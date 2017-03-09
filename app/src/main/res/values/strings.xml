@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Czasowniki nieregularne</string>
+    <string name="action_settings">Settings</string>
+    <string name="whiteString">White</string>
+    <string name="blackString">Black</string>
+    <string name="defaultString">Default</string>
+</resources>
