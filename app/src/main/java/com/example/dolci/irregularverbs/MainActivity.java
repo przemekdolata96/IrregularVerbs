@@ -1,27 +1,18 @@
 package com.example.dolci.irregularverbs;
 
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
-import java.util.ArrayList;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -172,6 +163,44 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+    void setFirstFormColor(int red,int green,int blue)
+    {
+        View view;
+        for (int i = 0; i <listView.getChildCount() ; i++) {
+            view= listView.getChildAt(i);
+            TextView textview=(TextView) view.findViewById(R.id.modelFistForm);
+            textview.setTextColor(Color.rgb(red,green,blue));
+        }
+
+    }
+    void setSecondFormColor(int red,int green,int blue)
+    {
+        View view;
+        for (int i = 0; i <listView.getChildCount() ; i++) {
+            view= listView.getChildAt(i);
+            TextView textview=(TextView) view.findViewById(R.id.modelSecondForm);
+            textview.setTextColor(Color.rgb(red,green,blue));
+        }
+    }
+    void setThirdFormColor(int red,int green,int blue)
+    {
+        View view;
+        for (int i = 0; i <listView.getChildCount() ; i++) {
+            view= listView.getChildAt(i);
+            TextView textview=(TextView) view.findViewById(R.id.modelThridForm);
+            textview.setTextColor(Color.rgb(red,green,blue));
+        }
+    }
+    void setTranslationFormColor(int red,int green,int blue)
+    {
+        View view;
+        for (int i = 0; i <listView.getChildCount() ; i++) {
+            view= listView.getChildAt(i);
+            TextView textview=(TextView) view.findViewById(R.id.modelTranslation);
+            textview.setTextColor(Color.rgb(red,green,blue));
+        }
+    }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -190,9 +219,11 @@ public class MainActivity extends AppCompatActivity {
                 {
                     item.setChecked(true);
                 }
-                main_view.setBackgroundColor(Color.rgb(0,0,0));
-                TextView t1=(TextView) findViewById(R.id.modelFistForm);
-                t1.setTextColor(Color.rgb(255,255,255));
+                main_view.setBackgroundColor(Color.rgb(15,15,15));
+                setFirstFormColor(175,50,50);
+                setSecondFormColor(50,175,50);
+                setThirdFormColor(50,50,175);
+                setTranslationFormColor(255,255,255);
 
                 return true;
 
@@ -208,8 +239,11 @@ public class MainActivity extends AppCompatActivity {
                 {
                     item.setChecked(true);
                 }
-                main_view.setBackgroundColor(Color.rgb(255,255,255));
-
+                main_view.setBackgroundColor(Color.rgb(225,225,225));
+                setFirstFormColor(105,0,0);
+                setSecondFormColor(0,105,0);
+                setThirdFormColor(0,0,105);
+                setTranslationFormColor(0,0,0);
                 return true;
             }
             case  R.id.defaultBackground:
@@ -223,6 +257,10 @@ public class MainActivity extends AppCompatActivity {
                     item.setChecked(true);
                 }
                 main_view.setBackgroundColor(Color.rgb(68,68,68));
+                setFirstFormColor(255,179,179);
+                setSecondFormColor(198,255,179);
+                setThirdFormColor(179,198,255);
+                setTranslationFormColor(255,255,255);
                 return true;
             }
             default:

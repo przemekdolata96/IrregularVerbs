@@ -1,6 +1,7 @@
 package com.example.dolci.irregularverbs;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -41,6 +42,7 @@ public class Adapter extends ArrayAdapter<String>{
         ImageView image;
 
     }
+
 
     @Override
     public int getCount() {
@@ -86,5 +88,7 @@ public class Adapter extends ArrayAdapter<String>{
 
         return convertView;
     }
+
+
 
 }
